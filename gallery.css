@@ -1,0 +1,166 @@
+.gallery {
+    padding: 0px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ff4d6d;
+}
+
+.images {
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    padding: 10px;
+    align-items: start; /* important ! chaque photo garde sa hauteur naturelle */
+}
+
+.images img {
+    width: 70%;
+    height: auto;        /* ← la clé ! la hauteur s'adapte aux proportions */
+    object-fit: contain; /* rien n'est coupé */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #1a1a1a; /* fond sombre si l'image ne remplit pas */
+}
+
+.images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4d6daa;
+}
+
+@media (max-width: 768px) {
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Overlay sombre */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Conteneur */
+.popup {
+    position: relative;
+    text-align: center;
+}
+
+/* Image centrée */
+#popupImg {
+    max-width: 300px;
+    border-radius: 15px;
+    animation: rotateIn 0.6s ease;
+}
+
+/* Message derrière */
+#popupMessage {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff4d6d;
+    animation: fadeIn 1s ease;
+}
+
+/* Animation rotation */
+@keyframes rotateIn {
+    from {
+        transform: scale(0.5) rotate(-180deg);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Animation texte */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#muah{
+    width: 400px;
+    height: auto;
+    padding-bottom: 50px;
+    transition: all 0.3s ease;
+}
+
+#muah:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #594dffaa,
+                0 0 35px #933b3baa,
+                0 0 75px #ffff4daa;
+}
+.head-gallery{
+    padding-top: 50px;
+    margin-left: 30%;
+    width: 600px;
+    margin-bottom: 50px;
+    height: auto;
+    background-color: rgba(37, 39, 163, 0.5);
+    align-items: center;
+
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: rgb(38, 127, 38);
+}
+
+#bg-video-albom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* assombrit la vidéo */
+    z-index: -1;
+}
+
+#retour{
+
+    text-decoration: none;
+    background-color: rgba(8, 87, 87, 0.8);
+    border-radius: 5%;
+    padding: 10px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+#retour:hover{
+    text-decoration: none;
+    background-color: rgba(47, 139, 139, 0.2);
+    border-radius: 5%;
+    padding: 10px;
+    margin: 30px;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #594dffaa,
+                0 0 35px #933b3baa,
+                0 0 75px #ffff4daa;
+}

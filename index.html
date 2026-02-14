@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="question">
+            <h1 id="homeTitle" > (^,^) Coucou mon Mimi !!!!❤️</h1>
+            <br>
+            <br>
+            <P>Veut-tu etre ma valentine ?</P>
+
+            <div class="bisou-container">
+                <img src="photo/image(34).jpeg" alt="bisou" class="bisou">
+                <img src="photo/image(35).jpeg" alt="bisou" class="bisou">
+            </div>
+                
+            <div class="yes-no-buttons">
+                <button id="btnOui"> Oui 💕</button>
+                <button id="btnNon"> Non 😢</button>
+            </div>
+
+        </div>
+        <a href="gallery.html" id="gallery">Click here darling 💌</a>
+    </div>
+
+    <!-- POPUP CHOIX VIDEO -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Ecran de choix -->
+            <div id="videoChoix">
+                <h3>Choisis une vidéo 💕</h3>
+                <div class="video-liste">
+                    <div class="video-card" onclick="lancerVideo('loveyou.mp4')">
+                        <video src="loveyou.mp4" muted></video>
+                        <p>💌 Video 1</p>
+                    </div>
+                    <div class="video-card" onclick="lancerVideo('miaoun.mp4')">
+                        <video src="miaoun.mp4" muted></video>
+                        <p>🐱 Video 2</p>
+                    </div>
+                    <div class="video-card" onclick="lancerVideo('ImissYou.mp4')">
+                        <video src="ImissYou.mp4" muted></video>
+                        <p>❤️ Video 3</p>
+                    </div>
+                    <div class="video-card" onclick="lancerVideo('dudu.mp4')">
+                        <video src="dudu.mp4" muted></video>
+                        <p>❤️ Video 4</p>
+                    </div>
+                    <div class="video-card" onclick="lancerVideo('hihihi.mp4')">
+                        <video src="hihihi.mp4" muted></video>
+                        <p>❤️ Video 5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lecteur vidéo -->
+            <div id="videoPlayer" style="display:none;">
+                <button id="btnRetour">← Retour</button>
+                <video controls autoplay id="loveVideo">
+                    <source id="videoSource" src="" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <script src="scrypt.js"></script>
+</body>
+<video autoplay muted loop id="bg-video">
+    <source src="mimi.mp4" type="Video/mp4">
+</video>
+</html>
