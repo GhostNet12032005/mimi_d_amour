@@ -13,25 +13,27 @@
 .images {
     margin-left: 40px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-    padding: 10px;
+    padding: 20px;
+    margin: 20px;
     align-items: start; /* important ! chaque photo garde sa hauteur naturelle */
 }
 
 .images img {
-    width: 70%;
+    width: 60%;
     height: auto;        /* ← la clé ! la hauteur s'adapte aux proportions */
     object-fit: contain; /* rien n'est coupé */
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     background-color: #1a1a1a; /* fond sombre si l'image ne remplit pas */
+    border: 5px #ff4d6d solid;
 }
 
 .images img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #ff4d6daa;
+    box-shadow: 0 0 35px #ff4d6daa;
 }
 
 @media (max-width: 768px) {
@@ -66,9 +68,10 @@
 
 /* Message derrière */
 #popupMessage {
+    font-family: 'Dancing Script', cursive;
     margin-top: 20px;
-    font-size: 1.2rem;
-    color: #ff4d6d;
+    font-size: 40px;
+    color: #e30d0d;
     animation: fadeIn 1s ease;
 }
 
@@ -95,6 +98,7 @@
     height: auto;
     padding-bottom: 50px;
     transition: all 0.3s ease;
+    opacity: 0.7;
 }
 
 #muah:hover{
@@ -102,6 +106,7 @@
     box-shadow: 0 0 15px #594dffaa,
                 0 0 35px #933b3baa,
                 0 0 75px #ffff4daa;
+    opacity: 1;
 }
 .head-gallery{
     padding-top: 50px;
@@ -114,10 +119,9 @@
 
 }
 
-h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    color: rgb(38, 127, 38);
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
 }
 
 #bg-video-albom {

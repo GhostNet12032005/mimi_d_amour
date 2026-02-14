@@ -14,6 +14,7 @@ body {
 }
 
 .home {
+    margin-left: 40%;
     margin-top: 60px;
     flex: 1; /* prend tout l'espace disponible */
     display: flex;
@@ -23,38 +24,47 @@ body {
     align-items: center;
 }
 
+.demande{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font: 900;
+    color: #fffeff;
+}
 
 .yes-no-buttons {
     padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     gap: 80px;             /* espace entre Oui et Non */
     justify-content: center;
     margin: 15px 0;
 }
 
-#btnOui{
-    font-family: fantasy;
-    font-size: 30px;
-    font-size: bold;
-    width: 150px;
-    height: 40px;
-    color: rgb(251, 247, 248);
-    background-color: rgb(231, 128, 145);
-}
 
 #btnNon{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-size: bold;
-    width: 150px;
-    height: 40px;
-    color: rgb(0, 0, 0);
-    background-color: red;
-    transition: left 0.1s ease, top 0.1s ease;
-    cursor: not-allowed;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #d8b4c6;
+    color: white;
+    transition: 0.3s;
 }
 
 #btnOui {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px; /* bouton arrondi */
+    cursor: pointer;
+    
+    background: linear-gradient(45deg, #ff4da6, #ff99cc);
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
     transition: all 0.3s ease;
 }
 
@@ -69,36 +79,25 @@ body {
 }
 
 #gallery{
-    text-align: center;
-    text-decoration: none;
-    color: rgb(249, 249, 249);
-    padding: 10px;
-    margin-top: 20px;
-    width: 250px;
-    border: 2px solid blue;
-    border-radius: 5%;
+    background: linear-gradient(135deg, #aa6c7d 0%, #a07681 100%);
+    color: rgb(38, 3, 3);
+    font-family: 'Pacifico', cursive; /* Police romantique */
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(11, 208, 51, 0.5);
+    padding: 15px 40px;
+    border: 3px solid rgb(245, 243, 243);
+    border-radius: 50px; /* Bouton arrondi */
+    box-shadow: 0 8px 20px rgba(158, 86, 110, 0.4);
+    cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
+
 #gallery:hover{
-    text-align: center;
-    text-decoration: none;
-    color: rgb(249, 249, 249);
-    padding: 10px;
-    margin-top: 20px;
-    width: 300px;
-    border: 2px solid blue;
-    border-radius: 5%;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(11, 208, 51, 0.5);
     transform: scale(1.1);
     cursor: pointer;
-     box-shadow: 0 0 25px #e26767,
-                 0 0 50px #0c0264,
-                 0 0 100px #034e1eaa;
+    box-shadow: 0 0 25px #e26767,
+                0 0 50px #0c0264,
+                0 0 100px #034e1eaa;
 }
 
 .bisou-container {
@@ -116,6 +115,7 @@ body {
     box-shadow: 0 0 10px #ff4d6daa;
     flex-shrink: 1;
     min-width: 0;
+    opacity: 0.8;
 }
 
 /* Animation lettre qui tombe */
@@ -136,18 +136,25 @@ body {
     animation: drop 0.6s forwards;
 }
 
+#homeTitle{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: #f30505;
+}
+
 .question{
     width: 600px;
     height: 500px;
     padding: 30px 20px;
     display: flex;
     border: none;
-    border-radius: 35%;
+    border-radius: 20%;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(11, 65, 65, 0.5);
+    background-color: rgba(185, 50, 187, 0.5);
     animation: breathe 2.5s ease-in-out infinite;
     overflow: hidden;     /* ← empêche tout débordement */
+    padding-bottom: 10px;
 }
 
 @keyframes breathe {
